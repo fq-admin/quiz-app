@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "question",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "option1": {
+      "type": "string"
+    },
+    "option2": {
+      "type": "string"
+    },
+    "option3": {
+      "type": "string"
+    },
+    "option4": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    },
+    "q": {
+      "type": "text"
+    },
+    "level": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::level.level",
+      "inversedBy": "questions"
+    },
+    "subtopic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subtopic.subtopic",
+      "inversedBy": "questions"
+    }
+  }
+}
